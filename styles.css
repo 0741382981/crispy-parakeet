@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* color scheme */
+:root {
+    --primary-color: #ff5722; /* Main color for buttons and highlights */
+    --secondary-color: #007bff; /* Accent color for links and other elements */
+    --background-color: #f8f9fa; /* Background color for sections */
+    --text-color: #0a0000; /* Main text color */
+    --heading-color: #444; /* Color for headings */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+nav.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+nav.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.mobile-menu li {
+    margin: 10px 0;
+}
+
+nav.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.hero-banner {
+    background-image: url('../shoes/footwear-1838767_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e64a19; /* Change color on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 50px;
+}
+
+
+.sections {
+    background-color: #f5f5f5; 
+    padding: 50px 30px; 
+    text-align: center;
+}
+
+.sections h3.subtitle {
+    color: var(--secondary-color);
+    font-size: 0.8rem; 
+    margin-bottom: 10px; 
+}
+
+.sections h2 {
+    color: var(--heading-color); 
+    font-weight: bold; 
+    font-size: 2rem; 
+    margin-bottom: 20px;
+}
+
+.sections .grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sections .box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.9s ease, box-shadow 0.9s ease;
+    border-radius: 10px; 
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.sections .box img {
+    width: 100%;
+    height:300px;
+    display: block;
+}
+
+.sections .box-text {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+}
+
+.sections.box:hover .box-text {
+    bottom: 0;
+}
+
+.sections .box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+
+
+.box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    transform: translateY(5px); /* Move up on hover */
+}
+
+.box img {
+    width:300px;
+    height: 400px;
+}
+
+.our-story-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position:relative;
+}
+
+.story-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 40px; /* Adjust as needed */
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.learn-more-button:hover {
+    background-color: #e64a19;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 400px;
+    max-width: 400px;
+    position: relative;
+}
+
+
+.image-container img {
+    width:100%;
+    height: auto;
+}
+
+.icons img {
+    width:100px;
+    height: 100px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cta-button, .footer-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
